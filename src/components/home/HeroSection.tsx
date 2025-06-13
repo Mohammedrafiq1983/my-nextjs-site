@@ -61,7 +61,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="text-white border-white hover:bg-white/10 rounded-full py-6"
+              className="bg-vibranet-orange hover:bg-vibranet-orange/90 text-white rounded-full py-6 px-8"
               onClick={() => setIsVideoOpen(true)}
             >
               <Play size={20} className="ml-2" />

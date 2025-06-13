@@ -61,7 +61,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="bg-gradient-to-r from-vibranet-gradient-start to-vibranet-gradient-end hover:opacity-90 rounded-full py-1 w-full"
+              className="bg-gradient-to-r from-vibranet-gradient-start to-vibranet-gradient-end hover:opacity-90 rounded-full py-6 px-8"
               onClick={() => setIsVideoOpen(true)}
             >
               <Play size={20} className="ml-2" />

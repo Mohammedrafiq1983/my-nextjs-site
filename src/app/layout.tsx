@@ -1,41 +1,20 @@
-import type { Metadata } from "next";
-import { Inter, Heebo, Cairo } from "next/font/google";
-import "./globals.css";
-import ClientBody from "./ClientBody";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const heebo = Heebo({
-  variable: "--font-heebo",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const cairo = Cairo({
-  variable: "--font-cairo",
-  subsets: ["arabic"],
-  display: "swap",
-});
+import type { Metadata } from 'next';
+import { dir } from 'i18next';
+import { languages } from '../i18n/settings';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "احمد زيدان نت - مزود خدمة الإنترنت وخدمات الإنترنت العريض",
-  description: "احمد زيدان نت - مزود خدمة الإنترنت وخدمات الإنترنت العريض",
+  title: 'eDarris Office, Education & Business Supplies',
+  description: 'B2B supplier of stationery, education supplies, print-shop consumables and packaging materials in Iraq and MENA.'
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function RootLayout({ children, params }: any) {
   return (
-    <html lang="ar" dir="rtl" className={`${inter.variable} ${heebo.variable} ${cairo.variable}`}>
-      <ClientBody>
+    <html lang={params.locale} dir={dir(params.locale)}>
+      <body className="antialiased min-h-screen flex flex-col">
         {children}
-      </ClientBody>
+      </body>
     </html>
   );
 }
